@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+:root {
+    --almost-white: hsl(0, 0%, 98%);
+    --medium-gray: hsl(0, 0%, 41%);
+    --almost-black: hsl(0, 0%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: 'Epilogue', sans-serif;
+    color: var(--medium-gray);
+    background-color: var(--almost-white);
+}
+
+li {
+    list-style-type: none;
+}
+
+nav {
+    padding: 1.5rem 2rem;
+}
+
+
+/* Utilities */
+
+.p-1 {
+    padding: 0.5rem;
+}
+
+.p-2 {
+    padding: 1rem;
+}
+
+.p-3 {
+    padding: 1.5rem;
+}
+
+.p-4 {
+    padding: 2rem;
+}
+
+.me-1 {
+    margin-right: 0.5rem;
+}
+
+.me-2 {
+    margin-right: 1rem;
+}
+
+.me-3 {
+    margin-right: 1.5rem;
+}
+
+.me-4 {
+    margin-right: 2rem;
+}
+
+.ms-1 {
+    margin-left: 0.5rem;
+}
+
+.ms-2 {
+    margin-left: 1rem;
+}
+
+.ms-3 {
+    margin-left: 1.5rem;
+}
+
+.ms-4 {
+    margin-left: 2rem;
+}
+
+.mt-1 {
+    margin-top: 0.5rem;
+}
+
+.mt-2 {
+    margin-top: 1rem;
+}
+
+.mt-3 {
+    margin-top: 1.5rem;
+}
+
+.mt-4 {
+    margin-top: 2rem;
+}
+
+.mb-1 {
+    margin-bottom: 0.5rem;
+}
+
+.mb-2 {
+    margin-bottom: 1rem;
+}
+
+.mb-3 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-4 {
+    margin-bottom: 2rem;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.btn {
+    background: none;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+}
+
+.btn-outline {
+    border: 2px solid var(--medium-gray);
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.fs-75 {
+    font-size: 75%;
+}
+
+.fs-12px {
+    font-size: 12px;
+}
+
+.p-relative {
+    position: relative;
+}
+
+
+/* Specifics */
+
+.logo {
+    padding-top: 0.8rem;
+    padding-left: 1rem;
+}
+
+.chevron-down {
+    margin-left: 0.1rem;
+}
+
+.nav-dropdown {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+    min-width: 111px;
+    background-color: #fff;
+    box-shadow: -1px 22px 62px -12px rgba(87, 87, 87, 0.8);
+    -webkit-box-shadow: -1px 22px 62px -12px rgba(87, 87, 87, 0.8);
+    -moz-box-shadow: -1px 22px 62px -12px rgba(87, 87, 87, 0.8);
+}
+
+.nav-dropdown li {
+    padding: 0.5rem;
+    background-color: #fff;
+}
+
+.active,
+.btn:hover,
+.nav-item:hover {
+    cursor: pointer;
+    color: var(--almost-black);
+}
+
+.active,
+.btn-outline:hover {
+    border-color: var(--almost-black);
+}
+
+.active svg path,
+.nav-item:hover svg path {
+    stroke: var(--almost-black);
+}
+
+#hamburger,
+#closeMenu {
+    display: none;
+}
+
+.responsive {
+    display: block;
+}
+
+@media (max-width: 785px) {
+    #hamburger,
+    #closeMenu {
+        display: block;
+    }
+    #closeMenu,
+    #closeMenu img {
+        background-color: #fff;
+    }
+    #closeMenu {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        margin-bottom: 1.5rem;
+    }
+    nav {
+        justify-content: space-between;
+        padding: 0.5rem;
+    }
+    .navbar {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        height: 100%;
+        width: 100%;
+    }
+    .navbar-content {
+        min-width: 186px;
+        position: absolute;
+        padding: 1rem;
+        right: 0;
+        top: 0;
+        height: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .navbar-content,
+    .navbar-content ul {
+        flex-direction: column;
+        background-color: #fff;
+    }
+    .navbar-content ul {
+        margin: 0;
+        justify-content: start;
+    }
+    .navbar-content ul li {
+        background-color: #fff;
+        margin-bottom: 0.9rem;
+    }
+    .navbar-content ul:nth-child(3) {
+        width: 100%;
+        align-items: center;
+    }
+    .navbar-content ul:nth-child(3) li {
+        margin-bottom: 0.2rem;
+    }
+    .dropdown-container .nav-dropdown {
+        position: relative;
+        right: 0;
+        min-width: none;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 0.9rem;
+    }
+    .navbar-content .nav-dropdown li {
+        margin-bottom: 0;
+    }
+    .dropdown-container {
+        background-color: #fff;
+    }
+    .nav-dropdown li {
+        margin-left: 0.5rem;
+    }
+    .responsive {
+        display: none;
+    }
+}

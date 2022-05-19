@@ -18,28 +18,64 @@
 
 <body>
     <header>
-        <a href="">
-            <img src="/images/logo.svg" alt="Logo">
-        </a>
-        <ul>
-            <li>Features <i class="fas fa-chevron-down"></i></li>
-            <li>Company <i class="fas fa-chevron-down"></i></li>
-            <li>Careers</li>
-            <li>About</li>
-        </ul>
-        <ul>
-            <li>
-                <button>Login</button>
-            </li>
-            <li>
-                <button>Register</button>
-            </li>
-        </ul>
+        <nav class="d-flex align-center">
+            <a href="" class="logo me-3">
+                <img src="/images/logo.svg" alt="Logo">
+            </a>
+            <img id="hamburger" src="./images/icon-menu.svg" alt="hamburger-icon" onclick="openSideMenu()">
+            <div class="navbar flex-1">
+                <div class="navbar-content d-flex align-center justify-between">
+                    <div id="closeMenu" onclick="closeSideMenu()">
+                        <img src="./images/icon-close-menu.svg" alt="close-menu-icon">
+                    </div>
+                    <ul class="d-flex ms-4">
+                        <div class="p-relative dropdown-container">
+                            <li class="me-4 fs-75 nav-item" onclick="showDropdown(this, 'featureDropdown')">
+                                Features
+                                <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg" class="chevron-down"><path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/></svg>
+                            </li>
+                            <div id="featureDropdown" class="nav-dropdown">
+                                <ul>
+                                    <li class="fs-75 d-flex"><img src="./images/icon-todo.svg" class="me-2" alt=""> Todo List</li>
+                                    <li class="fs-75 d-flex"><img src="./images/icon-calendar.svg" class="me-2" alt=""> Calendar</li>
+                                    <li class="fs-75 d-flex"><img src="./images/icon-reminders.svg" class="me-2" alt=""> Reminders</li>
+                                    <li class="fs-75 d-flex"><img src="./images/icon-planning.svg" class="me-2" alt=""> Planning</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="p-relative dropdown-container">
+                            <li class="me-4 fs-75 nav-item p-relative" onclick="showDropdown(this, 'companyDropdown')">
+                                Company
+                                <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg" class="chevron-down"><path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/></svg>
+                            </li>
+                            <div id="companyDropdown" class="nav-dropdown">
+                                <ul>
+                                    <li class="fs-75 d-flex">History</li>
+                                    <li class="fs-75 d-flex">Our Team</li>
+                                    <li class="fs-75 d-flex">Blog</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <li class="me-4 fs-75 nav-item">Careers</li>
+                        <li class="fs-75 nav-item">About</li>
+                    </ul>
+
+                    <ul class="d-flex">
+                        <li class="me-2">
+                            <button class="btn fs-75 ">Login</button>
+                        </li>
+                        <li>
+                            <button class="btn btn-outline fs-75">Register</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
         <div>
-            <img src="/images/image-hero-mobile.png" alt="Hero Mobile">
+            <!-- <img src="/images/image-hero-mobile.png " alt="Hero Mobile "> -->
             <h1>Make remote work</h1>
             <p>Get your team in sync, no matter your location.</p>
             <p>Streamline processes, create team rituals, and watch productivity soar.</p>
@@ -47,18 +83,18 @@
                 Learn more
             </button>
             <div>
-                <img src="./images/client-databiz.svg" alt="">
-                <img src="./images/client-audiophile.svg" alt="">
-                <img src="./images/client-meet.svg" alt="">
-                <img src="./images/client-maker.svg" alt="">
+                <img src="./images/client-databiz.svg " alt=" ">
+                <img src="./images/client-audiophile.svg " alt=" ">
+                <img src="./images/client-meet.svg " alt=" ">
+                <img src="./images/client-maker.svg " alt=" ">
             </div>
         </div>
     </main>
-    <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.
+    <div class="attribution ">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge " target="_blank ">Frontend Mentor</a>. Coded by <a href="# ">Your Name Here</a>.
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js "></script>
 </body>
 
 </html>
